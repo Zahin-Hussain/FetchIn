@@ -1,7 +1,7 @@
 const express = require('express');
 const scrapeProfile = require('./fetcher'); // your scraper file
 const app = express();
-const port = 3000;
+const port = process.env.port || 3000;
 
 app.get('/takess', async (req, res) => {
   const profileUrl = req.query.url;
