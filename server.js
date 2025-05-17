@@ -3,6 +3,10 @@ const scrapeProfile = require('./fetcher'); // your scraper file
 const app = express();
 const port = process.env.port || 3000;
 
+app.get('/',(req,res)=>{
+  res.json({msg:"The server is online"})
+});
+
 app.get('/takess', async (req, res) => {
   const profileUrl = req.query.url;
   
